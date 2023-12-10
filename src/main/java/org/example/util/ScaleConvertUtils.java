@@ -10,6 +10,9 @@ public class ScaleConvertUtils {
       'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',};
 
     public static String _10_to_62(long num) {
+        if (num <= 0) {
+            throw new RuntimeException("num cannot be zero or negative number.");
+        }
         var builder = new StringBuilder();
         while (num != 0) {
             var pos = num - (num / 62) * 62;
