@@ -13,4 +13,10 @@ public interface ILinkUniqueCode {
      * @return normal or not
      */
     boolean isNormal();
+
+    /**
+     * retry on get failure
+     * @return uniqueCode
+     */
+    long retry();
 }

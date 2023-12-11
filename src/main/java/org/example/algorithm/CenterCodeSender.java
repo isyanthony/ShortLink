@@ -1,11 +1,8 @@
 package org.example.algorithm;
 
-import org.springframework.stereotype.Component;
-
 /**
  * depend on global code send service
  */
-@Component
 public class CenterCodeSender implements ILinkUniqueCode {
 
     @Override
@@ -16,5 +13,9 @@ public class CenterCodeSender implements ILinkUniqueCode {
     @Override
     public boolean isNormal() {
         return false;
+    }
+    @Override
+    public long retry() {
+        return 0;
     }
 }
